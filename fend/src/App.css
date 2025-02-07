@@ -1,0 +1,117 @@
+*{
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    box-sizing: border-box;
+}
+
+nav{
+    width: 100vw;
+    height: 10vh;
+    background-color: black;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+a{
+    color: white;
+    font-size: 20px;
+    text-decoration: none
+}
+
+.home, .add{
+    width: 100%;
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items:  center;
+}
+
+.con{
+    width: 95%;
+    height: fit-content;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    /* align-items: center; */
+    column-gap: 3rem;
+    /* border: 2px solid; */
+    padding-top: 1rem;
+}
+
+.card{
+    width: 420px;
+    height: 300px;
+}
+
+img{
+    height: 250px;
+    aspect-ratio: 16/9;
+}
+
+.upload{
+    height: 70%;
+    width: 50%;
+    /* border: 2px solid; */
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+input{
+    width: 65%;
+    padding: 0.8rem;
+    font-size: 1rem;
+    /* border: 1px solid rgb(141, 141, 141); */
+}
+
+input::placeholder{
+    font-size: 1rem;
+}
+
+.upload img{
+    width: "100%";
+    height: "100%";
+    object-fit: "cover"
+}
+
+.imgInput{
+    height: 200px;
+    /* width: 300px; */
+    aspect-ratio: 16/9;
+    border: 2px solid;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.imgInput label{
+    width: 100%;
+    height: 100%;
+    /* padding: 100%; */
+}
+
+.imgInput label span{
+    text-align: center;
+}
+
+button{
+    padding: 0.6rem 1.8rem;
+    font-size: 1.1rem;
+    background-color: rgb(0, 156, 156);
+    border: 1px solid;
+    border-radius: 5px;
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+button:hover{
+    background-color: rgb(0, 136, 136);
+}
