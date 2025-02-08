@@ -12,6 +12,15 @@ const add=async(req, res) => {
     }
 }
 
+const filter=async(req,res)=>{
+    try{
+        let data=await md.find({name:{$regex:req.params.str,$options:"i"}})
+        res.send(data)
+    }catch(err){
+        res.send("error in filter")
+    }
+}
+
 const data=async (req, res) => {
     try {
         let data = await md.find()
@@ -21,4 +30,4 @@ const data=async (req, res) => {
     }
 }
 
-module.exports={add,data}
+module.exports={add,data,filter}

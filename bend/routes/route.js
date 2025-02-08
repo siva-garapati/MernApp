@@ -1,7 +1,7 @@
 let express = require("express")
 let multer = require("multer")
 let { v4: uuidv4 } = require("uuid")
-const { add, data } = require("../controllers/imgController")
+const { add, data, filter } = require("../controllers/imgController")
 
 let route=new express.Router()
 
@@ -17,7 +17,8 @@ const storage = multer.diskStorage({
 
 const upload = multer({ storage: storage })
 
-route.post('/add', upload.single('file') ,add)
+route.post('/add', upload.single('file'),add)
 route.get('/get',data)
+route.get('/filter/:str',filter)
 
 module.exports=route

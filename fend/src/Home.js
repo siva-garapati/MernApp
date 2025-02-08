@@ -1,5 +1,6 @@
 import axios from 'axios'
 import React, { useEffect, useState } from 'react'
+import Search from './Search'
 
 const Home = () => {
     let [images,setImages]=useState([])
@@ -12,6 +13,7 @@ const Home = () => {
     },[])
   return (
     <div className='home'>
+        <Search setImages={setImages}/>
         <div className='con'>
             {
                 images.map((obj)=>{
