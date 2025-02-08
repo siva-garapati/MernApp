@@ -5,10 +5,15 @@ const Search = ({setImages}) => {
     let [str,setStr]=useState('')
 
     let handleSearch=()=>{
-      axios.get(`http://localhost:5000/filter/${str}`).then((res)=>{
-        console.log(res.data)
-        setImages(res.data)
-      })
+      if(str){
+        axios.get(`http://localhost:5000/filter/${str}`).then((res) => {
+          console.log(res.data)
+          setImages(res.data)
+        })
+      }
+      else{
+        alert("enter a value")
+      }
     }
   return (
     <div className='search'>
